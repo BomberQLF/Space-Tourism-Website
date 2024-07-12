@@ -22,12 +22,8 @@ html {
 }
 
 body {
-  overflow: hidden;
-  background-image: url('/assets/home/background-home-desktop.jpg');
-  background-position: center;
-  background-size: cover;
-  background-repeat: no-repeat;
-  height: 100vh;
+  // overflow: hidden;
+  // height: 100vh;
   margin: 0;
 
   // Styles pour le header
@@ -149,6 +145,14 @@ body {
 
 // Media query supérieur pour les écrans 
 @media (min-width: 768px) {
+
+  body {
+    background-image: url('/assets/home/background-home-desktop.jpg');
+    background-position: center;
+    background-size: cover;
+    background-repeat: no-repeat;
+  }
+
   #hiddenBurger {
     display: none;
   }
