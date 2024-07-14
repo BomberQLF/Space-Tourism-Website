@@ -24,7 +24,7 @@ fetch('data.json')
                 <li id="europa" class="destinations">Europa</li>
                 <li id="titan" class="destinations">Titan</li>
               </ul>
-              <h1>${destinationData.name}</h1>
+              <h1 class="title">${destinationData.name}</h1>
               <p class="description">${destinationData.description}</p>
               <div class="info_container">
                 <div class="info_block">

@@ -40,7 +40,7 @@ html {
         font-size: 1.4rem;
         color: white;
         text-transform: uppercase;
-        margin-bottom: 7rem;
+        margin-bottom: 4rem;
         letter-spacing: 4px;
     }
 
@@ -153,8 +153,12 @@ html {
         width: 514px !important;
     }
 
+    .heading {
+        font-size: 1.2rem !important;
+    }
+
     body {
-        background-image: url(/assets/destination/background-destination-tablet.jpg);
+        // background-image: url(/assets/destination/background-destination-tablet.jpg);
         background-position: center;
         background-size: cover;
         background-repeat: no-repeat;
@@ -167,10 +171,41 @@ html {
                 align-items: center;
                 gap: 1rem;
 
-                .destinations_container {
-                    // text-align: center;
-                }
+                // .destinations_container {
+                //     // text-align: center;
+                // }
             }
         }
+    }
+}
+
+@media (max-width: 480px) {
+    .heading {
+        text-align: center;
+        font-size: 1.1rem !important;
+    }
+
+    .title {
+        text-align: center !important;
+    }
+
+    .destinations_container {
+        display: flex !important;
+        flex-direction: column !important;
+        margin: auto !important;
+       max-width: 480px !important;
+    }
+
+    .description {
+        max-width: 330px !important;
+    }
+
+    ul {
+        margin: 1rem auto;
+    }
+
+    #planet {
+        width: 150px;
+        height: 150px;
     }
 }
