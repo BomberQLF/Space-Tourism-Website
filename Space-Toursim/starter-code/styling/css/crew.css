@@ -11,4 +11,26 @@ html {
   background-color: #0B0D17;
 }
 
+#crew_page {
+  display: block;
+  padding: 0 12rem;
+}
+#crew_page .number {
+  font-family: "Barlow Condensed", sans-serif;
+  font-size: 1.4rem;
+  font-weight: 700;
+  line-height: 4.72px;
+  color: rgb(102, 99, 99);
+  margin-right: 14px;
+  letter-spacing: 4px;
+}
+#crew_page .heading {
+  font-family: "Barlow Condensed", sans-serif;
+  font-size: 1.4rem;
+  color: white;
+  text-transform: uppercase;
+  margin-bottom: 4rem;
+  letter-spacing: 4px;
+}
+
 /*# sourceMappingURL=crew.css.map */

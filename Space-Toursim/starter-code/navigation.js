@@ -34,7 +34,7 @@ document.addEventListener("DOMContentLoaded", () => {
     destinationNav.addEventListener('click', (e) => {
         e.preventDefault();
         homePage.style.display = "none";
-        destinationPage.style.display = "block";  // Ajoutez cette ligne
+        destinationPage.style.display = "block"; 
         body.style.backgroundImage = "url('/assets/destination/background-destination-desktop.jpg')";
         body.style.backgroundPosition = "center";
         body.style.backgroundSize = "cover";
@@ -44,7 +44,7 @@ document.addEventListener("DOMContentLoaded", () => {
     button.addEventListener('click', (e) => {
         e.preventDefault();
         homePage.style.display = "none";
-        destinationPage.style.display = "block";  // Ajoutez cette ligne
+        destinationPage.style.display = "block"; 
         body.style.backgroundImage = "url('/assets/destination/background-destination-desktop.jpg')";
         body.style.backgroundPosition = "center";
         body.style.backgroundSize = "cover";
@@ -54,14 +54,14 @@ document.addEventListener("DOMContentLoaded", () => {
     homeNav.addEventListener('click', (e) => {
         e.preventDefault();
         homePage.style.display = "block";
-        destinationPage.style.display = "none";  // Ajoutez cette ligne
+        destinationPage.style.display = "none";
         body.style.backgroundImage = "url('/assets/home/background-home-desktop.jpg')";
     });
 
     crewNav.addEventListener('click', (e) => {
         e.preventDefault();
         homePage.style.display = "none";
-        destinationPage.style.display = "none";  // Ajoutez cette ligne
+        destinationPage.style.display = "none";
         body.style.backgroundImage = "url('/assets/crew/background-crew-desktop.jpg')";
         body.style.backgroundPosition = "center";
         body.style.backgroundSize = "cover";

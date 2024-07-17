@@ -1,6 +1,6 @@
 fetch('data.json')
- .then(response => response.json())
- .then(data => {
+  .then(response => response.json())
+  .then(data => {
     const destinationSection = document.getElementById('destination_page');
     const destinations = data.destinations;
 
@@ -59,9 +59,38 @@ fetch('data.json')
       }
     }
 
+    // Partie CREW
+    const crewSection = document.getElementById('crew_page');
+    const crew = data.crew;
+
+    function updateCrew(crewPersonName) {
+      const crewData = crew.find(crew => crew.name === crewPersonName);
+      
+      if (crewData) {
+        const crewElement = document.createElement('div');
+        crewElement.classList.add('crew');
+
+        crewElement.innerHTML = `
+          <p class="heading"><span class="number">02</span>Meet your crew</p>
+          <div class="container">
+            <div class="crew_left">
+              <p class="rank">Commander</p>
+              <h1 class="crewman">${crew.name}</h1>
+
+        `;
+
+        // Vider la section de l'équipage avant d'ajouter le nouvel élément
+        crewSection.innerHTML = '';
+        crewSection.appendChild(crewElement);
+      }
+    }
+
     // Initialiser la destination "Moon" par défaut
     updateDestination('Moon');
+
+    // Initialiser l'équipage avec "Douglas Hurley" par défaut
+    updateCrew('Douglas Hurley');
   })
- .catch(error => {
+  .catch(error => {
     console.error('Error fetching data:', error);
   });

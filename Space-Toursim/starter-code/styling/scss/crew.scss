@@ -20,3 +20,27 @@ $bellefair: "Bellefair", serif;
 html {
   background-color: $dark-navy;
 }
+
+#crew_page {
+  display: block;
+  padding: 0 12rem;
+
+  .number {
+      font-family: $barlow-condensed;
+      font-size: 1.4rem;
+      font-weight: 700;
+      line-height: 4.72px;
+      color: rgb(102, 99, 99);
+      margin-right: 14px;
+      letter-spacing: 4px;
+  }
+
+  .heading {
+      font-family: $barlow-condensed;
+      font-size: 1.4rem;
+      color: white;
+      text-transform: uppercase;
+      margin-bottom: 4rem;
+      letter-spacing: 4px;
+  }
+}

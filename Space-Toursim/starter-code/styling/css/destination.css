@@ -15,6 +15,7 @@ html {
 #destination_page {
   display: block;
   padding: 0 12rem;
+  margin-bottom: 10rem;
 }
 #destination_page .number {
   font-family: "Barlow Condensed", sans-serif;
