@@ -1,9 +1,9 @@
 // Initialiser AOS
 document.addEventListener('DOMContentLoaded', () => {
   AOS.init({
-    duration: 1200, // Duration of the animations
-    easing: 'ease-in-out', // Easing function
-    once: true, // Whether animation should happen only once
+    duration: 1200,
+    easing: 'ease-in-out', 
+    once: true, 
   });
 });
 
