@@ -32,5 +32,156 @@ html {
   margin-bottom: 4rem;
   letter-spacing: 4px;
 }
+#crew_page .container {
+  display: flex;
+  gap: 16rem;
+}
+#crew_page .container .crew_left {
+  margin-top: 6rem;
+}
+#crew_page .container .crew_left .rank {
+  font-size: 1.8rem;
+  text-transform: uppercase;
+  color: rgba(255, 255, 255, 0.513);
+  font-family: "Bellefair", serif;
+}
+#crew_page .container .crew_left .crewman {
+  color: white;
+  text-transform: uppercase;
+  font-size: 3.1rem;
+  font-family: "Bellefair", serif;
+  margin-top: -1rem;
+}
+#crew_page .container .crew_left .bio {
+  color: rgba(208, 214, 249, 0.7254901961);
+  margin-top: -1rem;
+}
+#crew_page .container .crew_left .slider_container {
+  display: flex;
+  margin-top: 10rem;
+  position: absolute;
+  bottom: 10rem;
+}
+#crew_page .container .crew_left .slider_container .slider_box {
+  content: "";
+  width: 15px;
+  height: 15px;
+  background-color: grey;
+  border-radius: 50%;
+  margin: 0 24px 0 0;
+  cursor: pointer;
+}
+#crew_page .container .crew_right {
+  display: flex;
+  align-items: flex-end;
+}
+#crew_page .container .crew_right .image_container {
+  max-width: 539px;
+  max-height: 676px;
+}
+#crew_page .container .crew_right .image_container img {
+  max-width: 25rem;
+  height: auto;
+  margin-bottom: 8rem;
+}
+
+@media (max-width: 768px) {
+  body {
+    background-image: url("/assets/crew/background-crew-tablet.jpg");
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+  }
+  .heading {
+    margin-top: 2rem;
+  }
+  #crew_page {
+    padding: 0 2rem;
+  }
+  #crew_page .container {
+    flex-direction: column;
+    align-items: center;
+    gap: 3rem;
+  }
+  #crew_page .container .crew_left {
+    margin-top: 4rem;
+    text-align: center;
+  }
+  #crew_page .container .crew_left .rank {
+    font-size: 1.6rem;
+  }
+  #crew_page .container .crew_left .crewman {
+    font-size: 2.6rem !important;
+  }
+  #crew_page .container .crew_left .bio {
+    font-size: 1rem;
+    max-width: 32rem;
+  }
+  #crew_page .container .crew_left .slider_container {
+    position: absolute;
+    left: 14rem;
+    top: 11rem;
+    margin-top: 4rem;
+    justify-content: center;
+  }
+  #crew_page .container .crew_left .slider_container .slider_box {
+    width: 10px;
+    height: 10px;
+    margin: 0 12px 0 0;
+  }
+  #crew_page .container .crew_right {
+    align-items: center;
+  }
+  #crew_page .container .crew_right .image_container img {
+    max-width: 27rem;
+    margin-bottom: 4rem;
+  }
+}
+@media (max-width: 480px) {
+  body {
+    background-image: url("/assets/crew/background-crew-mobile.jpg");
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+  }
+  #crew_page {
+    padding: 0 1rem;
+  }
+  #crew_page .container {
+    flex-direction: column;
+    align-items: center;
+    gap: 2rem;
+  }
+  #crew_page .container .crew_left {
+    margin-top: 2rem;
+    text-align: center;
+  }
+  #crew_page .container .crew_left .rank {
+    font-size: 1.4rem;
+  }
+  #crew_page .container .crew_left .crewman {
+    font-size: 2.2rem;
+  }
+  #crew_page .container .crew_left .bio {
+    font-size: 0.9rem;
+  }
+  #crew_page .container .crew_left .slider_container {
+    margin-top: 3rem;
+    position: absolute;
+    left: 10rem;
+  }
+  #crew_page .container .crew_left .slider_container .slider_box {
+    width: 8px;
+    height: 8px;
+    margin: 0 8px 0 0;
+  }
+  #crew_page .container .crew_right {
+    align-items: center;
+  }
+  #crew_page .container .crew_right .image_container img {
+    max-width: 21rem;
+    margin-bottom: 2rem;
+  }
+}
 
 /*# sourceMappingURL=crew.css.map */

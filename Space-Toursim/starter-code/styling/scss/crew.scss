@@ -26,21 +26,210 @@ html {
   padding: 0 12rem;
 
   .number {
-      font-family: $barlow-condensed;
-      font-size: 1.4rem;
-      font-weight: 700;
-      line-height: 4.72px;
-      color: rgb(102, 99, 99);
-      margin-right: 14px;
-      letter-spacing: 4px;
+    font-family: $barlow-condensed;
+    font-size: 1.4rem;
+    font-weight: 700;
+    line-height: 4.72px;
+    color: rgb(102, 99, 99);
+    margin-right: 14px;
+    letter-spacing: 4px;
   }
 
   .heading {
-      font-family: $barlow-condensed;
-      font-size: 1.4rem;
-      color: white;
-      text-transform: uppercase;
-      margin-bottom: 4rem;
-      letter-spacing: 4px;
+    font-family: $barlow-condensed;
+    font-size: 1.4rem;
+    color: white;
+    text-transform: uppercase;
+    margin-bottom: 4rem;
+    letter-spacing: 4px;
+  }
+
+  .container {
+    display: flex;
+    gap: 16rem;
+
+    .crew_left {
+      margin-top: 6rem;
+
+      .rank {
+        font-size: 1.8rem;
+        text-transform: uppercase;
+        color: rgba(255, 255, 255, 0.513);
+        font-family: $bellefair;
+      }
+
+      .crewman {
+        color: white;
+        text-transform: uppercase;
+        font-size: 3.1rem;
+        font-family: $bellefair;
+        margin-top: -1rem;
+      }
+
+      .bio {
+        color: #d0d6f9b9;
+        margin-top: -1rem;
+      }
+
+      .slider_container {
+        display: flex;
+        margin-top: 10rem;
+        position: absolute;
+        bottom: 10rem;
+
+        .slider_box {
+          content: "";
+          width: 15px;
+          height: 15px;
+          background-color: grey;
+          border-radius: 50%;
+          margin: 0 24px 0 0;
+          cursor: pointer;
+        }
+      }
+    }
+
+    .crew_right {
+      display: flex;
+      align-items: flex-end; 
+
+      .image_container {
+        max-width: 539px;
+        max-height: 676px;
+
+        img {
+          max-width: 25rem;
+          height: auto;
+          margin-bottom: 8rem;
+        }
+      }
+    }
+  }
+}
+
+// Responsive pour les tablettes
+@media (max-width: 768px) {
+  body {
+    background-image: url('/assets/crew/background-crew-tablet.jpg');
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+  }
+
+  .heading {
+    margin-top: 2rem;
+  }
+
+  #crew_page {
+    padding: 0 2rem;
+
+    .container {
+      flex-direction: column;
+      align-items: center;
+      gap: 3rem;
+
+      .crew_left {
+        margin-top: 4rem;
+        text-align: center;
+
+        .rank {
+          font-size: 1.6rem;
+        }
+
+        .crewman {
+          font-size: 2.6rem !important;
+        }
+
+        .bio {
+          font-size: 1rem;
+          max-width: 32rem;
+        }
+
+        .slider_container {
+          position: absolute;
+          left: 14rem;
+          top: 11rem;
+          margin-top: 4rem;
+          justify-content: center;
+
+          .slider_box {
+            width: 10px;
+            height: 10px;
+            margin: 0 12px 0 0;
+          }
+        }
+      }
+
+      .crew_right {
+        align-items: center;
+
+        .image_container {
+          img {
+            max-width: 27rem;
+            margin-bottom: 4rem;
+          }
+        }
+      }
+    }
+  }
+}
+
+// Responsive pour les mobiles
+@media (max-width: 480px) {
+  body {
+    background-image: url('/assets/crew/background-crew-mobile.jpg');
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+  }
+
+  #crew_page {
+    padding: 0 1rem;
+
+    .container {
+      flex-direction: column;
+      align-items: center;
+      gap: 2rem;
+
+      .crew_left {
+        margin-top: 2rem;
+        text-align: center;
+
+        .rank {
+          font-size: 1.4rem;
+        }
+
+        .crewman {
+          font-size: 2.2rem;
+        }
+
+        .bio {
+          font-size: 0.9rem;
+        }
+
+        .slider_container {
+          margin-top: 3rem;
+          position: absolute;
+          left: 10rem;
+
+          .slider_box {
+            width: 8px;
+            height: 8px;
+            margin: 0 8px 0 0;
+          }
+        }
+      }
+
+      .crew_right {
+        align-items: center;
+
+        .image_container {
+          img {
+            max-width: 21rem;
+            margin-bottom: 2rem;
+          }
+        }
+      }
+    }
   }
 }

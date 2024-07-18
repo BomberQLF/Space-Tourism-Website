@@ -1,3 +1,12 @@
+// Initialiser AOS
+document.addEventListener('DOMContentLoaded', () => {
+  AOS.init({
+    duration: 1200, // Duration of the animations
+    easing: 'ease-in-out', // Easing function
+    once: true, // Whether animation should happen only once
+  });
+});
+
 fetch('data.json')
   .then(response => response.json())
   .then(data => {
@@ -12,12 +21,12 @@ fetch('data.json')
         destinationElement.classList.add('destination');
 
         destinationElement.innerHTML = `
-          <p class="heading"><span class="number">01</span>Pick your destination</p>
-          <div class="container">
-            <div class="image_container">
-              <img id="planet" src="${destinationData.images.webp}" alt="${destinationData.name} image">
+          <p class="heading" data-aos="fade-left"><span class="number">01</span>Pick your destination</p>
+          <div class="container" data-aos="fade-left">
+            <div class="image_container" data-aos="fade-up">
+              <img id="planet" class="destination_image" src="${destinationData.images.webp}" alt="${destinationData.name} image">
             </div>
-            <div class="destinations_container">
+            <div class="destinations_container" data-aos="fade-left">
               <ul>
                 <li id="moon" class="destinations">Moon</li>
                 <li id="mars" class="destinations">Mars</li>
@@ -27,11 +36,11 @@ fetch('data.json')
               <h1 class="title">${destinationData.name}</h1>
               <p class="description">${destinationData.description}</p>
               <div class="info_container">
-                <div class="info_block">
+                <div class="info_block" data-aos="fade-left">
                   <h2 class="info_heading">Avg. Distance</h2>
                   <p class="info_value">${destinationData.distance}</p>
                 </div>
-                <div class="info_block">
+                <div class="info_block" data-aos="fade-left">
                   <h2 class="info_heading">Est. Travel Time</h2>
                   <p class="info_value">${destinationData.travel}</p>
                 </div>
@@ -40,56 +49,128 @@ fetch('data.json')
           </div>
         `;
 
-        // Vider la section de destination avant d'ajouter le nouvel élément
         destinationSection.innerHTML = '';
         destinationSection.appendChild(destinationElement);
 
-        // Ajouter des écouteurs d'événements à chaque lien de destination
-        const moonNav = document.getElementById('moon');
-        moonNav.addEventListener('click', () => updateDestination('Moon'));
+        // Add event listeners for destinations
+        document.getElementById('moon').addEventListener('click', () => updateDestination('Moon'));
+        document.getElementById('mars').addEventListener('click', () => updateDestination('Mars'));
+        document.getElementById('europa').addEventListener('click', () => updateDestination('Europa'));
+        document.getElementById('titan').addEventListener('click', () => updateDestination('Titan'));
 
-        const marsNav = document.getElementById('mars');
-        marsNav.addEventListener('click', () => updateDestination('Mars'));
-
-        const europaNav = document.getElementById('europa');
-        europaNav.addEventListener('click', () => updateDestination('Europa'));
-
-        const titanNav = document.getElementById('titan');
-        titanNav.addEventListener('click', () => updateDestination('Titan'));
+        // GSAP animation for destination image
+        gsap.fromTo(
+          '.destination_image',
+          { opacity: 0, scale: 0.8 },
+          { opacity: 1, scale: 1, duration: 2.2, ease: "power1.out" }
+        );
       }
     }
 
-    // Partie CREW
     const crewSection = document.getElementById('crew_page');
     const crew = data.crew;
 
     function updateCrew(crewPersonName) {
       const crewData = crew.find(crew => crew.name === crewPersonName);
-      
+
       if (crewData) {
         const crewElement = document.createElement('div');
         crewElement.classList.add('crew');
 
         crewElement.innerHTML = `
-          <p class="heading"><span class="number">02</span>Meet your crew</p>
-          <div class="container">
-            <div class="crew_left">
-              <p class="rank">Commander</p>
-              <h1 class="crewman">${crew.name}</h1>
-
+          <p class="heading" data-aos="fade-left"><span class="number">02</span>Meet your crew</p>
+          <div class="container" data-aos="fade-left">
+            <div class="crew_left" data-aos="fade-left">
+              <p class="rank">${crewData.role}</p>
+              <h1 class="crewman">${crewData.name}</h1>
+              <p class="bio">${crewData.bio}</p>
+              <div class="slider_container" data-aos="fade-left">
+                <div class="slider_box" id="douglas"></div>
+                <div class="slider_box" id="mark"></div>
+                <div class="slider_box" id="victor"></div>
+                <div class="slider_box" id="anousheh"></div>
+              </div>
+            </div>
+            <div class="crew_right" data-aos="fade-right">
+              <div class="image_container">
+                <img class="crew_picture" src="${crewData.images.webp}" alt="${crewData.name}">
+              </div>
+            </div>
+          </div>
         `;
 
-        // Vider la section de l'équipage avant d'ajouter le nouvel élément
         crewSection.innerHTML = '';
         crewSection.appendChild(crewElement);
+
+        // Add event listeners for crew
+        document.getElementById('douglas').addEventListener('click', () => updateCrew('Douglas Hurley'));
+        document.getElementById('mark').addEventListener('click', () => updateCrew('Mark Shuttleworth'));
+        document.getElementById('victor').addEventListener('click', () => updateCrew('Victor Glover'));
+        document.getElementById('anousheh').addEventListener('click', () => updateCrew('Anousheh Ansari'));
+
+        // GSAP animation for crew image
+        gsap.fromTo(
+          '.crew_picture',
+          { opacity: 0, scale: 0.8 },
+          { opacity: 1, scale: 1, duration: 2.2, ease: "power1.out" }
+        );
       }
     }
 
-    // Initialiser la destination "Moon" par défaut
-    updateDestination('Moon');
+    const techSection = document.getElementById('tech_page');
+    const tech = data.technology;
 
-    // Initialiser l'équipage avec "Douglas Hurley" par défaut
+    function updateTechnology(technologyPhase) {
+      const techData = tech.find(tech => tech.name === technologyPhase);
+
+      if (techData) {
+        const techDiv = document.createElement('div');
+        techDiv.classList.add('tech_container');
+
+        techDiv.innerHTML = `
+          <p class="heading" data-aos="fade-left"><span class="number">03</span>Space Launch 101</p>
+          <div class="container" data-aos="fade-left">
+            <div class="tech_left" data-aos="fade-left">
+              <div class="slider_space">
+                <span class="circle" id="one">1</span>
+                <span class="circle" id="two">2</span>
+                <span class="circle" id="three">3</span>
+              </div>
+              <div>
+                <p class="rank">The terminology...</p>
+                <h1 class="crewman">${techData.name}</h1>
+                <p class="bio">${techData.description}</p>
+              </div>
+            </div>
+            <div class="tech_right" data-aos="fade-right">
+              <div class="space_image_container">
+                <img class="tech_image" src="${techData.images.portrait}" alt="${techData.name}">
+              </div>
+            </div>
+          </div>
+        `;
+
+        techSection.innerHTML = '';
+        techSection.appendChild(techDiv);
+
+        // Add event listeners for technology
+        document.getElementById('one').addEventListener('click', () => updateTechnology('Launch vehicle'));
+        document.getElementById('two').addEventListener('click', () => updateTechnology('Spaceport'));
+        document.getElementById('three').addEventListener('click', () => updateTechnology('Space capsule'));
+
+        // GSAP animation for technology image
+        gsap.fromTo(
+          '.tech_image',
+          { opacity: 0, scale: 0.8 },
+          { opacity: 1, scale: 1, duration: 2.2, ease: "power1.out" }
+        );
+      }
+    }
+
+    // Initial content
+    updateDestination('Moon');
     updateCrew('Douglas Hurley');
+    updateTechnology('Launch vehicle');
   })
   .catch(error => {
     console.error('Error fetching data:', error);

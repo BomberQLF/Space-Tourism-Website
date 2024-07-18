@@ -1,0 +1,88 @@
+@import url("https://fonts.googleapis.com/css2?family=Bellefair&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Barlow:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Barlow+Condensed:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900&display=swap");
+*,
+*::before,
+*::after {
+  box-sizing: border-box;
+}
+
+html {
+  background-color: #0B0D17;
+  font-family: "Barlow", sans-serif;
+  color: #D0D6F9;
+}
+
+#tech_page {
+  display: block;
+  padding: 0 12rem;
+}
+#tech_page .heading {
+  font-family: "Barlow Condensed", sans-serif;
+  font-size: 1.4rem;
+  color: white;
+  text-transform: uppercase;
+  margin-bottom: 4rem;
+  letter-spacing: 4px;
+}
+#tech_page .heading .number {
+  font-family: "Barlow Condensed", sans-serif;
+  font-size: 1.4rem;
+  font-weight: 700;
+  line-height: 4.72px;
+  color: rgb(102, 99, 99);
+  margin-right: 14px;
+  letter-spacing: 4px;
+}
+#tech_page .container {
+  display: flex;
+  gap: 3rem;
+}
+#tech_page .container .tech_left {
+  margin-top: 6rem;
+  display: flex;
+}
+#tech_page .container .tech_left .slider_space {
+  display: flex;
+  flex-direction: column;
+  margin: 2rem 2rem 0 0;
+}
+#tech_page .container .tech_left .slider_space .circle {
+  width: 80px;
+  height: 80px;
+  cursor: pointer;
+  border-radius: 50%;
+  background-color: transparent;
+  border: 1px solid gray;
+  color: #D0D6F9;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  margin-bottom: 2.4rem;
+  font-family: "Bellefair", serif;
+  font-size: 2rem;
+}
+#tech_page .container .tech_left .slider_space .circle:hover {
+  transition: 0.5s;
+  background-color: white;
+  color: #0B0D17;
+}
+#tech_page .container .tech_left .rank {
+  font-size: 1.8rem;
+  text-transform: uppercase;
+  color: rgba(255, 255, 255, 0.513);
+  font-family: "Bellefair", serif;
+}
+#tech_page .container .tech_left .crewman {
+  color: white;
+  text-transform: uppercase;
+  font-size: 3.1rem;
+  font-family: "Bellefair", serif;
+  margin-top: -1rem;
+}
+#tech_page .container .tech_left .bio {
+  color: rgba(208, 214, 249, 0.7254901961);
+  margin-top: -1rem;
+}
+
+/*# sourceMappingURL=tech.css.map */

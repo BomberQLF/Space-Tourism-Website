@@ -1,0 +1,106 @@
+// Import Google Fonts
+@import url('https://fonts.googleapis.com/css2?family=Bellefair&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Barlow:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Barlow+Condensed:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900&display=swap');
+
+// Define variables
+$dark-navy: #0B0D17;
+$light-blue: #D0D6F9;
+$barlow-regular: "Barlow", sans-serif;
+$barlow-condensed: "Barlow Condensed", sans-serif;
+$bellefair: "Bellefair", serif;
+
+// Global styles
+*,
+*::before,
+*::after {
+  box-sizing: border-box;
+}
+
+html {
+  background-color: $dark-navy;
+  font-family: $barlow-regular;
+  color: $light-blue;
+}
+
+#tech_page {
+  display: block;
+  padding: 0 12rem;
+
+  .heading {
+    font-family: $barlow-condensed;
+    font-size: 1.4rem;
+    color: white;
+    text-transform: uppercase;
+    margin-bottom: 4rem;
+    letter-spacing: 4px;
+
+    .number {
+      font-family: $barlow-condensed;
+      font-size: 1.4rem;
+      font-weight: 700;
+      line-height: 4.72px;
+      color: rgb(102, 99, 99);
+      margin-right: 14px;
+      letter-spacing: 4px;
+    }
+  }
+
+  .container {
+    display: flex;
+    gap: 3rem;
+
+    .tech_left {
+      margin-top: 6rem;
+      display: flex;
+
+      .slider_space {
+        display: flex;
+        flex-direction: column;
+        margin: 2rem 2rem 0 0;
+
+        .circle {
+            width: 80px;
+            height: 80px;
+            cursor: pointer;
+            border-radius: 50%;
+            background-color: transparent;
+            border: 1px solid gray;
+            color: $light-blue;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            margin-bottom: 2.4rem;
+            font-family: $bellefair;
+            font-size: 2rem;
+          }
+
+          .circle:hover {
+            transition: 0.5s;
+            background-color: white;
+            color: $dark-navy;
+          }
+      }
+
+      .rank {
+        font-size: 1.8rem;
+        text-transform: uppercase;
+        color: rgba(255, 255, 255, 0.513);
+        font-family: $bellefair;
+      }
+
+      .crewman {
+        color: white;
+        text-transform: uppercase;
+        font-size: 3.1rem;
+        font-family: $bellefair;
+        margin-top: -1rem;
+      }
+
+      .bio {
+        color: #d0d6f9b9;
+        margin-top: -1rem;
+      }
+    }
+  }
+}

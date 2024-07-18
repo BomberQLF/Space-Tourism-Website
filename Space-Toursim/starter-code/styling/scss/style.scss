@@ -169,7 +169,7 @@ body {
 @media (max-width: 768px) {
 
   body {
-    background-image: url(/assets/home/background-home-tablet.jpg);
+    background-image: url(/assets/home/background-home-tablet.jpg) !important;
     background-position: center;
     background-size: cover;
     background-repeat: no-repeat;
