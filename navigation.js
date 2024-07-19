@@ -25,6 +25,8 @@ document.addEventListener("DOMContentLoaded", () => {
     const homeNav = document.getElementById('home');
     const crewNav = document.getElementById('crew');
     const techNav = document.getElementById('technology');
+    const logoNav = document.getElementById('logo');
+    const button = document.querySelector('button');
     const body = document.querySelector('body');
   
     // Variables pour des éléments spécifiques à chaque pages
@@ -38,6 +40,28 @@ document.addEventListener("DOMContentLoaded", () => {
     destinationPage.style.display = "none";
     crewPage.style.display = "none";
     techPage.style.display = "none";
+
+
+    logoNav.addEventListener('click', (e) => {
+      e.preventDefault();
+      body.style.backgroundImage = "url('/assets/home/background-home-desktop.jpg')";
+      homePage.style.display = 'block';
+      crewPage.style.display = "none";
+      techPage.style.display = "none";
+      destinationPage.style.display = 'none';
+    })
+
+    button.addEventListener('click', (e) => {
+      e.preventDefault();
+      homePage.style.display = 'none';
+      crewPage.style.display = "none";
+      techPage.style.display = "none";
+      destinationPage.style.display = 'block';
+      body.style.backgroundImage = "url('/assets/destination/background-destination-desktop.jpg')"
+      body.style.backgroundPosition = "center";
+      body.style.backgroundSize = "cover";
+      body.style.backgroundRepeat = "no-repeat";
+    })
   
     destinationNav.addEventListener('click', (e) => {
       e.preventDefault();
@@ -83,5 +107,6 @@ document.addEventListener("DOMContentLoaded", () => {
       body.style.backgroundSize = "cover";
       body.style.backgroundRepeat = "no-repeat";
     });
+
   });
   

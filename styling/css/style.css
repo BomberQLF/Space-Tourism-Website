@@ -139,7 +139,7 @@ body header nav ul li a span {
 }
 @media (max-width: 768px) {
   body {
-    background-image: url(/assets/home/background-home-tablet.jpg) !important;
+    background-image: url(/assets/home/background-home-tablet.jpg);
     background-position: center;
     background-size: cover;
     background-repeat: no-repeat;
@@ -149,7 +149,7 @@ body header nav ul li a span {
   }
   #home_page {
     margin-top: 8rem;
-    display: flex !important;
+    display: flex;
     flex-direction: column;
     align-items: center;
     padding: 0;
@@ -172,7 +172,7 @@ body header nav ul li a span {
 @media (max-width: 480px) {
   
   body {
-    background-image: url(/assets/home/background-home-tablet.jpg) !important;
+    background-image: url(/assets/home/background-home-mobile.jpg);
     background-position: center;
     background-size: cover;
     background-repeat: no-repeat;
@@ -214,7 +214,7 @@ body header nav ul li a span {
     display: none;
   }
   #home_page {
-    display: block;
+    display: flex;
     margin-top: 2rem;
     padding: 0 1rem;
   }

@@ -1,7 +1,7 @@
 // Initialiser AOS
 document.addEventListener('DOMContentLoaded', () => {
   AOS.init({
-    duration: 1200,
+    duration: 1000,
     easing: 'ease-in-out', 
     once: true, 
   });
@@ -62,7 +62,7 @@ fetch('data.json')
         gsap.fromTo(
           '.destination_image',
           { opacity: 0, scale: 0.8 },
-          { opacity: 1, scale: 1, duration: 2.2, ease: "power1.out" }
+          { opacity: 1, scale: 1, duration: 1, ease: "power1.out" }
         );
       }
     }
@@ -112,7 +112,7 @@ fetch('data.json')
         gsap.fromTo(
           '.crew_picture',
           { opacity: 0, scale: 0.8 },
-          { opacity: 1, scale: 1, duration: 2.2, ease: "power1.out" }
+          { opacity: 1, scale: 1, duration: 1, ease: "power1.out" }
         );
       }
     }
@@ -162,7 +162,7 @@ fetch('data.json')
         gsap.fromTo(
           '.tech_image',
           { opacity: 0, scale: 0.8 },
-          { opacity: 1, scale: 1, duration: 2.2, ease: "power1.out" }
+          { opacity: 1, scale: 1, duration: 1, ease: "power1.out" }
         );
       }
     }
