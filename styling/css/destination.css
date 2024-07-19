@@ -37,7 +37,7 @@ html {
 #destination_page .container {
   display: flex;
   align-items: center; /* Alignement vertical des éléments */
-  gap: 2rem; /* Espace entre les éléments */
+  gap: 5rem; /* Espace entre les éléments */
 }
 #destination_page .image_container {
   flex: 1; /* Prend tout l'espace disponible */
