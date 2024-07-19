@@ -13,7 +13,7 @@ html {
 
 body {
   overflow: hidden;
-  background-image: url("/assets/home/background-home-desktop.jpg");
+  background-image: url("../../assets/home/background-home-desktop.jpg");
   background-position: center;
   background-size: cover;
   background-repeat: no-repeat;
@@ -139,7 +139,11 @@ body header nav ul li a span {
 }
 @media (max-width: 768px) {
   body {
+<<<<<<< HEAD
     background-image: url(/assets/home/background-home-tablet.jpg);
+=======
+    background-image: url(../../assets/home/background-home-tablet.jpg);
+>>>>>>> 715acae794873c31f273ede8f7985682294795cb
     background-position: center;
     background-size: cover;
     background-repeat: no-repeat;
@@ -172,7 +176,11 @@ body header nav ul li a span {
 @media (max-width: 480px) {
   
   body {
+<<<<<<< HEAD
     background-image: url(/assets/home/background-home-mobile.jpg);
+=======
+    background-image: url(../../assets/home/background-home-tablet.jpg);
+>>>>>>> 715acae794873c31f273ede8f7985682294795cb
     background-position: center;
     background-size: cover;
     background-repeat: no-repeat;
