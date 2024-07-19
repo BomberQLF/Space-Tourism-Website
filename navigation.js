@@ -44,7 +44,7 @@ document.addEventListener("DOMContentLoaded", () => {
 
     logoNav.addEventListener('click', (e) => {
       e.preventDefault();
-      body.style.backgroundImage = "url('/assets/home/background-home-desktop.jpg')";
+      body.style.backgroundImage = "url('assets/home/background-home-desktop.jpg')";
       homePage.style.display = 'block';
       crewPage.style.display = "none";
       techPage.style.display = "none";
@@ -57,7 +57,7 @@ document.addEventListener("DOMContentLoaded", () => {
       crewPage.style.display = "none";
       techPage.style.display = "none";
       destinationPage.style.display = 'block';
-      body.style.backgroundImage = "url('/assets/destination/background-destination-desktop.jpg')"
+      body.style.backgroundImage = "url('assets/destination/background-destination-desktop.jpg')"
       body.style.backgroundPosition = "center";
       body.style.backgroundSize = "cover";
       body.style.backgroundRepeat = "no-repeat";
