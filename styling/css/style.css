@@ -13,7 +13,7 @@ html {
 
 body {
   overflow: hidden;
-  background-image: url("/assets/home/background-home-desktop.jpg");
+  background-image: url("./assets/home/background-home-desktop.jpg");
   background-position: center;
   background-size: cover;
   background-repeat: no-repeat;
